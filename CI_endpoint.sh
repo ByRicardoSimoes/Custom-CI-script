@@ -9,7 +9,7 @@ do
         case $var in
                 yourFirstCase ) #this is the content of the field .repoName
                         logger "$loggerName fetching and rebuilding ParkingManager..."
-                        /etc/systemd/system/updateParkingManager.sh ;;
+                        /your/path/your/script.sh ;;
                 * ) #this is the default case
                         amountOfFailures=$(( $amountOfFailures+1 ))
                         logger "$loggerName No case for repoName: $var ,amount of failures: $amountOfFailures" ;;
