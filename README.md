@@ -34,13 +34,18 @@ logger "$loggerName Closing off script, too many unknown parameters!"
 What we have here is the full script. It contains some variables to make it easier for us to change its behaviour.
 
 `loggerName` is a simple identifier so you can find it in the normal logging data of your OS. on Arch, this would be `journalctl`
+
 `var` is a temporary variable that holds the data with filter the payload for.
+
 `amountOfFailures` count's how often we've received bad data
+
 `maxAmountOfFailures` determines how often bad data can be received before the script (the while loop) stops.
 
 `var=$(nc -p port -l | jq -r '.repoName')` This right here does the following:
+
     - opens a `netcat` socket on `port` (replace with your port) and `-l`istens for incoming data
     - `jq -r .repoName` get's the raw data of the variable `repoName` inside the JSON payload. Without `-r` your `var` will contain the quotation marks
 
 Replace `yourFirstCase` with the String you're expecting in the payload
+
 Replace `/your/directory/your/script.sh` with the path to the script you want to execute
