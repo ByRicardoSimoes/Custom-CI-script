@@ -43,8 +43,8 @@ What we have here is the full script. It contains some variables to make it easi
 
 `var=$(nc -p port -l | jq -r '.repoName')` This right here does the following:
 
-    - opens a `netcat` socket on `port` (replace with your port) and `-l`istens for incoming data
-    - `jq -r .repoName` get's the raw data of the variable `repoName` inside the JSON payload. Without `-r` your `var` will contain the quotation marks
+   - opens a `netcat` socket on `port` (replace with your port) and `-l`istens for incoming data
+   - `jq -r .repoName` get's the raw data of the variable `repoName` inside the JSON payload. Without `-r` your `var` will contain the quotation marks
 
 Replace `yourFirstCase` with the String you're expecting in the payload
 
