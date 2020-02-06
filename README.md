@@ -4,7 +4,8 @@ I use a `.service` file to start it on boot.
 
 The file features a basic switch case. This allows you to launch different scripts from the same listening port.
 
-*This script requires both `netcat` and [`jq`](https://github.com/stedolan/jq)
+*This script requires both `netcat` and [`jq`](https://github.com/stedolan/jq)*
+
 The idea is for it to be used in conjunction with my [CustomHookAction](https://github.com/ByRicardoSimoes/CustomHookAction), but considering how `jq` can handle any
 JSON-based payload you can even use normal GitHub Webhooks with this script.
 
